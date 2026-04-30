@@ -1,0 +1,13 @@
+{
+  "name": "contentful-migrator",
+  "author": "Jorge Donoso",
+  "version": "1.0.0",
+  "scripts": {
+    "migrate": "ts-node app.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^22.0.0"
+  }
+}
