@@ -1,3 +1,0 @@
-type ContentfulExport = {
-  assets: ContentfulAsset[];
-};

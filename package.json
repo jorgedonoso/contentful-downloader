@@ -3,7 +3,7 @@
   "author": "Jorge Donoso",
   "version": "1.0.0",
   "scripts": {
-    "migrate": "ts-node app.ts"
+    "migrate": "ts-node src/app.ts"
   },
   "devDependencies": {
     "typescript": "^5.0.0",
