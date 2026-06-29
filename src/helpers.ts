@@ -11,9 +11,12 @@ export async function runPool<T>(
   limit: number,
   worker: (item: T) => Promise<void>,
 ) {
+  // Create queue of items to process.
   const queue = [...items];
 
+  // Start a fixed number of concurrent workers.
   const runners = Array.from({ length: limit }).map(async () => {
+    // Continue processing until the queue is empty.
     while (queue.length) {
       const item = queue.shift();
       if (!item) return;
@@ -21,6 +24,7 @@ export async function runPool<T>(
     }
   });
 
+  // Wait for all workers to finish.
   await Promise.all(runners);
 }
 
